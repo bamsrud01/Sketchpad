@@ -44,3 +44,17 @@ div {
 	background: white;
 	display: inline-block;
 }
+
+.button {
+	background-color: darkblue;
+	border: 3px solid red;
+	border-radius: 5px;
+	color: red;
+}
+
+.button:hover {
+	background-color: red;
+	border: 5px solid darkblue;
+	border-radius: 5px;
+	color: darkblue;
+}

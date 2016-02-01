@@ -132,3 +132,9 @@ function changeSize() {
 	var num = prompt("Please choose the size of the grid:");
 	createGrid(num);
 };
+
+$('button').hover( function() {
+	$(this).addClass('hoverButton');
+}, function() {
+	$(this).removeClass('hoverButton');
+});
