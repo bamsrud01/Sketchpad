@@ -51,10 +51,36 @@ $(document).ready(function() {
 		});
 	});
 	
-	$('#black').mouseenter(function() {
+	$('#black').click(function() {
 		activeColor = 'black';
 		wipe();
 		$('.box').unbind();
+		$('.box').css('background', 'black');
+		$('.box').mouseenter(function() {
+			$(this).css('background', drawGradient($(this)));
+		});
+		
+	});
+	
+	$('#redshade').click(function() {
+		activeColor = 'red';
+		wipe();
+		$('.box').unbind();
+		$('.box').css('background', 'red');
+		$('.box').mouseenter(function() {
+			$(this).css('background', drawGradient($(this)));
+		});
+		
+	});
+	
+	$('#blueshade').click(function() {
+		activeColor = 'blue';
+		wipe();
+		$('.box').unbind();
+		$('.box').css('background', 'blue');
+		$('.box').mouseenter(function() {
+			$(this).css('background', drawGradient($(this)));
+		});
 		
 	});
 	
@@ -63,6 +89,7 @@ $(document).ready(function() {
 
 /*The 'activeColor' variable keeps the color choice from reverting to blue when the grid size is changed.  See the click function for the '#choosesize' button, on line 7.*/
 var activeColor = 'blue';
+
 
 function createGrid(num) {
 	var size = 960;
@@ -78,7 +105,7 @@ function createGrid(num) {
 };
 
 function wipe() {
-	$('.box').css('background', 'white');
+	$('.box').css('background', 'white').css('opacity', '1');
 };
 
 function randomColor() {
@@ -87,7 +114,11 @@ function randomColor() {
 };
 
 function drawGradient(box) {
-	
+	var opacity = box.css('opacity');
+	var nextOpacity = opacity - 0.1
+	if (nextOpacity > 0) { box.css('opacity', nextOpacity); }
+	else { box.css('opacity', '0'); }
+};	
 
 function shadesBlue() {
 	
