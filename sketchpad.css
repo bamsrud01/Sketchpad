@@ -19,12 +19,12 @@ h1 {font-size: 52px; font-weight: bolder;}
 	border: 5px solid darkblue;
 	margin-bottom: 15px;
 	background-color: darkblue;
-	color: red;
+	color: white;
 	font-weight: bold;
 }
 
 #control, #shadebuttons {
-	width: 960px; 
+	width: 960px;
 	padding-bottom: 10px;
 }
 
@@ -47,13 +47,13 @@ div {
 
 .button {
 	background-color: darkblue;
-	border: 3px solid red;
+	border: 3px solid white;
 	border-radius: 5px;
-	color: red;
+	color: white;
 }
 
 .button:hover {
-	background-color: red;
+	background-color: white;
 	border: 5px solid darkblue;
 	border-radius: 5px;
 	color: darkblue;
